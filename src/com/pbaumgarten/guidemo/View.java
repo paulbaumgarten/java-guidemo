@@ -180,7 +180,10 @@ public class View extends JFrame {
             for (int i=0; i< ja.length(); i++) {
                 JSONObject o = ja.getJSONObject(i);
                 // Use each JSONObject to create a Person object
-                Person p = new Person(o.getString("name"), o.getString("email"), o.getString("phoneNumber"), o.getString("dateOfBirthString"));
+                Person p = new Person(o.getString("name"),
+                        o.getString("email"),
+                        o.getString("phoneNumber"),
+                        o.getString("dateOfBirthString"));
                 // Add the Person object to the ArrayList of people
                 people.add(p);
             }
